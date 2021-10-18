@@ -1,5 +1,4 @@
-## Guidelines for run tutorial 5
-### in tut
+## Guidelines for running tutorial 5
 #### test and initialize the mongodb
 
 cd api

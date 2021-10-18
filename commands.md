@@ -1,4 +1,17 @@
 ## Guidelines for running tutorial 5
+
+pre-installed environment needed:
+
+- ubuntu: docker pull ubuntu
+
+- mongodb: refer to this link https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database
+
+- git: apt install git
+
+- screen: apt install screen
+
+- open port 3000 and port 8000 for use
+
 #### test and initialize the mongodb
 
 cd api

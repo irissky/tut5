@@ -13,7 +13,7 @@ class DisplayHomepage extends React.Component {
       display: 'block'
     };
     this.handleClick = this.handleClick.bind(this);
- 
+    this.handleClear = this.handleClear.bind(this);
   }
   handleClick() {
     this.setState(prevState => ({
@@ -21,12 +21,24 @@ class DisplayHomepage extends React.Component {
       display: prevState.isToggleOn ? 'none' : 'block'
     }));
   }
- 
+  handleClear(e) {
+    e.preventDefault();
+    var confirmWin = window.confirm('Are you sure to delete all the appointments in the waiting list?');
+    if(confirmWin){
+      const issue = {
+        name: 'placeholder', 
+        phone: '1'
+      }
+      this.props.clearUpIssues(issue);
+      alert('Clear success!')
+    }
+  }
   render() {
     return (
       <div>
         <div className="HomeB">
           <button className="button buttonToHome" id="buttonToHome" onClick={this.handleClick}> <i className="fa fa-home">{this.state.isToggleOn ? '_off' : '_on'}</i> </button>
+          <button className="button buttonClearAll" onClick = {this.handleClear} > Clear the waiting list</button>
         </div>
         <div className="hotelInfo" id="hotelInfo" style={{ display: this.state.display }}>
           <div className="introPic" id="introPic" >
@@ -160,6 +172,7 @@ class IssueList extends React.Component {
     this.state = { issues: [] };
     this.createIssue = this.createIssue.bind(this);
     this.deleteIssue = this.deleteIssue.bind(this);
+    this.clearUpIssues = this.clearUpIssues.bind(this);
   }
 
   componentDidMount() {
@@ -207,14 +220,24 @@ class IssueList extends React.Component {
       this.loadData();
     }
   }
-
+  async clearUpIssues(issue) {
+    const query = `mutation issueClearAll($issue: IssueInputs!) {
+      issueClearAll(issue: $issue) {
+        name phone
+      }
+    }`;
+    const data = await graphQLFetch(query,{issue});
+    if (data ){
+      this.loadData();
+    }
+  }
 
   render() {
     return (
       <React.Fragment>
         
         <DisplayFreeSlots cur =  {MAXSIZE - this.state.issues.length} />
-        <DisplayHomepage />
+        <DisplayHomepage clearUpIssues = {this.clearUpIssues}/>
         <IssueChange createIssue={this.createIssue} deleteIssue = {this.deleteIssue}/>
         <br/>
         <IssueTable issues={this.state.issues} />

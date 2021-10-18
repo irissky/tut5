@@ -38,6 +38,7 @@ const resolvers = {
     setAboutMessage,
     issueAdd,
     issueDelete,
+    issueClearAll,
   },
   GraphQLDateTime,
 };
@@ -131,6 +132,13 @@ async function issueDelete(_,{issue}){
   await updateIDForDelete(deletedId);
   return res;
 }
+
+
+async function issueClearAll(_,{issue}){
+  await db.collection('issues').remove({});
+  return issue;
+}
+
 
 // helper function
 function checkValidPhoneNumber(phone) {

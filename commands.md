@@ -1,6 +1,6 @@
 ## Guidelines for running tutorial 5
 
-pre-installed environment needed:
+#### pre-installed environment needed:
 
 - ubuntu: docker pull ubuntu
 
@@ -42,3 +42,7 @@ cd ui
 screen npm start
 
 `CtrlA + d`  
+
+#### view the app from browser
+
+open **`localhost:8000`** in your browser and you can play with the app

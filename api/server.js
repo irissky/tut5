@@ -174,8 +174,8 @@ server.applyMiddleware({ app, path: '/graphql' });
 (async function () {
   try {
     await connectToDb();
-    app.listen(3000, function () {
-      console.log('API server started on port 3000');
+    app.listen(5000, function () {
+      console.log('API server started on port 5000');
     });
   } catch (err) {
     console.log('ERROR:', err);

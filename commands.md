@@ -47,5 +47,6 @@ screen npm start
 ```
 - press `CtrlA + d` to switch back to the console   
 #### view the app from browser
-open **`localhost:8000`** in your browser and you can play with the app
+- open **`localhost:8000`** in your browser and you can play with the app
+  
 ps: You'd better to follow all the steps above to make sure the app run correctly!

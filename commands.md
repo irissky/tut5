@@ -28,10 +28,9 @@ cd ..
 ```
 sudo service mongodb start
 ```
-#### test the mongodb [in folder `api`]
+#### test the mongodb with CRUD operations [in folder `api`]
 ```
 cd api
-mongo issuetracker --eval "db.customers.remove({})"
 node scripts/trymongo.js
 ```
 #### initialize the database and run the back-end api [in folder `api`]

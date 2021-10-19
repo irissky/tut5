@@ -1,6 +1,6 @@
 # MongoDB shell commands
 
-This is a list of all the mongo shell commands used in the book. It includes
+This is a list of all the mongo shell commands you can use to test. It includes
 commands used to try out things or change things manually.
 
 ## Chapter 6: MongoDB

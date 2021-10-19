@@ -3,7 +3,7 @@
 This is a list of all the mongo shell commands you can use to test. It includes
 commands used to try out things or change things manually.
 
-## Chapter 6: MongoDB
+ps: You can use the following commands to play with mongo, just to test the functions, which has no relations with the system built for tutorial 5.
 
 ### MongoDB Basics
 

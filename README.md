@@ -5,25 +5,25 @@
 ## Environment needed
 ### docker environment needed:
 
-- ubuntu: `docker pull ubuntu`:
+- **ubuntu**: `docker pull ubuntu`:
 
-- run the container with port 3000 and port 5000 open for use
+- **run the container with port 3000 and port 5000 open for use**
     ```
     docker run -p 3000:3000 -p 5000:5000 -dit ubuntu
     ```
 
-- install nvm and npm:
+- **install nvm and npm**:
     ```
     apt update
     apt install curl
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 
     ```
-    - restart the container
+    - restart the container and do the following
     ```
     nvm install 10
     npm install -g npm@6
     ```
-- mongodb: refer to professor's guidelines on Teams to install mongodb.
+- **mongodb**: refer to the following commands to install mongodb.
     ```
     apt install gnupg
     apt install curl
@@ -34,12 +34,13 @@
     apt update
     apt install mongodb-org
     apt install screen
-    screen mongod [Press Ctrl+a followed by d to return to terminal]
+    screen mongod
     ```
-    - If mongod screen exits instantly, then you have a problem. Do the following: `mkdir -p /data/db`, redo the `screen mongod` and press Ctrl+a followed by d to return to terminal. You are ready to run mongo CLI using $mongo.
+    - If mongod screen exits instantly, then you have a problem. Do the following: `mkdir -p /data/db`, redo the `screen mongod` and **press Ctrl+a followed by d to return to terminal**. You are ready to run mongo CLI using $mongo.
 
-- git: `apt install git` and then clone the tut5 using the following commands.
+- **git**: install git and clone my tutorial
     ```
+    apt install git
     git clone https://irissky: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@github.com/irissky/tut5.git 
     ```
 

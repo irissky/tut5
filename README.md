@@ -41,7 +41,7 @@
 - **git**: install git and clone my tutorial
     ```
     apt install git
-    git clone https://irissky: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@github.com/irissky/tut5.git 
+    git clone https://github.com/irissky/tut5.git 
     ```
 
 ## Commands for running tutorial 5

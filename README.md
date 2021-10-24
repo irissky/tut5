@@ -7,11 +7,13 @@
 
 - ubuntu: docker pull ubuntu
 
-- mongodb: refer to this link https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database
+- mongodb: refer to this link https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database or professor's guidelines on Teams to install mongodb.
 
 - git: apt install git
 
 - screen: apt install screen
+
+- sudo command [optional]
 
 - open port 3000 and port 5000 for use
 
@@ -25,9 +27,15 @@ cd ..
 ```
 ## Commands for running tutorial 5
 #### start the mongodb
+WAY1:
 ```
 sudo service mongodb start
 ```
+WAY2:
+```
+screen mongod
+```
+- press `CtrlA + d` to switch back to the console
 #### test the mongodb with CRUD operations [in folder `api`]
 ```
 cd api

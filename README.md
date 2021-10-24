@@ -2,12 +2,25 @@
 
 <p align="right">HU YUE(A0224726E)</p>
 
-## Environement needed
+## Environment needed
 #### docker environment needed:
 
 - ubuntu: docker pull ubuntu
 
-- mongodb: refer to professor's guidelines on Teams to install mongodb [recommended] or follow this link https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database.
+- mongodb: refer to professor's guidelines on Teams to install mongodb.
+    ```
+    apt install gnupg
+    apt install curl
+
+    curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list 
+    apt update
+    apt install mongodb-org
+    apt install screen
+    screen mongod [Press Ctrl+a followed by d to return to terminal]
+    ```
+    If mongod screen exits instantly, then you have a problem. Do the following: mkdir -p /data/db
 
 - git: apt install git
 
@@ -25,15 +38,10 @@ cd ..
 ```
 ## Commands for running tutorial 5
 #### start the mongodb
-- way1 [recommended: if you follow the prof's way to install mongodb]:
-    ```
-    screen mongod
-    ```
-    - press `CtrlA + d` to switch back to the console
-- way2 [if you follow the link to install mongodb]:
-    ```
-    sudo service mongodb start
-    ```
+```
+screen mongod
+```
+- Press Ctrl+a followed by d to return to terminal
 #### test the mongodb with CRUD operations [in folder `api`]
 ```
 cd api
@@ -44,13 +52,13 @@ node scripts/trymongo.js
 mongo issuetracker scripts/init.mongo.js
 screen npm start
 ```
-- press `CtrlA + d` to switch back to the console  
+- Press Ctrl+a followed by d to return to terminal
 #### run the front-end ui [in folder `ui`]
 ```
 cd ../ui
 screen npm start
 ```
-- press `CtrlA + d` to switch back to the console   
+- Press Ctrl+a followed by d to return to terminal   
 #### view the app from browser
 - open **`localhost:3000`** in your browser and you can play with the app
   

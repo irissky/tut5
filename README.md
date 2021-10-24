@@ -58,6 +58,7 @@ cd ..
 screen mongod
 ```
 - Press Ctrl+a followed by d to return to terminal
+- ps: if you have already started it when installing, you do not need to start it again here. You can test with `$mongo` to see whether you have started mongo already.
 ### test the mongodb with CRUD operations [in folder "api"]
 ```
 cd api

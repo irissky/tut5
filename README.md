@@ -5,8 +5,17 @@
 ## Environment needed
 #### docker environment needed:
 
-- ubuntu: docker pull ubuntu
-
+- ubuntu with nvm/npm installed: `docker pull ubuntu`, attach shell and do the following:
+    ```
+    apt update
+    apt install curl
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 
+    ```
+    - restart the container
+    ```
+    nvm install 10
+    npm install -g npm@6
+    ```
 - mongodb: refer to professor's guidelines on Teams to install mongodb.
     ```
     apt install gnupg
@@ -20,14 +29,13 @@
     apt install screen
     screen mongod [Press Ctrl+a followed by d to return to terminal]
     ```
-    If mongod screen exits instantly, then you have a problem. Do the following: mkdir -p /data/db
+    - If mongod screen exits instantly, then you have a problem. Do the following: `mkdir -p /data/db`, redo the `screen mongod` and press Ctrl+a followed by d to return to terminal. You are ready to run mongo CLI using $mongo.
 
 - git: apt install git
 
-- screen: apt install screen
-
 - open port 3000 and port 5000 for use
 
+## Commands for running tutorial 5
 #### install the dependencies
 ```
 cd api
@@ -36,7 +44,6 @@ cd ../ui
 npm install
 cd ..
 ```
-## Commands for running tutorial 5
 #### start the mongodb
 ```
 screen mongod

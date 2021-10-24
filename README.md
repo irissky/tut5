@@ -2,7 +2,7 @@
 
 <p align="right">HU YUE(A0224726E)</p>
 
-## Environment needed
+## Environment needed [skip this if you have met the requirements]
 ### docker environment needed:
 
 - **ubuntu**: `docker pull ubuntu`:

@@ -27,15 +27,15 @@ cd ..
 ```
 ## Commands for running tutorial 5
 #### start the mongodb
-WAY1:
-```
-sudo service mongodb start
-```
-WAY2:
-```
-screen mongod
-```
-- press `CtrlA + d` to switch back to the console
+- WAY1:
+    ```
+    sudo service mongodb start
+    ```
+- WAY2:
+    ```
+    screen mongod
+    ```
+    - press `CtrlA + d` to switch back to the console
 #### test the mongodb with CRUD operations [in folder `api`]
 ```
 cd api

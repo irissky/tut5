@@ -13,7 +13,7 @@
 
 - screen: apt install screen
 
-- sudo command [optional]
+- sudo: apt-get install sudo [optional]
 
 - open port 3000 and port 5000 for use
 

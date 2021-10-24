@@ -3,7 +3,7 @@
 <p align="right">HU YUE(A0224726E)</p>
 
 ## Environment needed
-#### docker environment needed:
+### docker environment needed:
 
 - ubuntu: `docker pull ubuntu`:
 
@@ -38,13 +38,13 @@
     ```
     - If mongod screen exits instantly, then you have a problem. Do the following: `mkdir -p /data/db`, redo the `screen mongod` and press Ctrl+a followed by d to return to terminal. You are ready to run mongo CLI using $mongo.
 
-- git: `apt install git` and then clone the tut5
+- git: `apt install git` and then clone the tut5 using the following commands.
     ```
     git clone https://irissky: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@github.com/irissky/tut5.git 
     ```
 
 ## Commands for running tutorial 5
-#### install the dependencies
+### install the dependencies
 ```
 cd api
 npm install
@@ -52,29 +52,29 @@ cd ../ui
 npm install
 cd ..
 ```
-#### start the mongodb
+### start the mongodb
 ```
 screen mongod
 ```
 - Press Ctrl+a followed by d to return to terminal
-#### test the mongodb with CRUD operations [in folder `api`]
+### test the mongodb with CRUD operations [in folder "api"]
 ```
 cd api
 node scripts/trymongo.js
 ```
-#### initialize the database and run the back-end api [in folder `api`]
+### initialize the database and run the back-end api [in folder "api"]
 ```
 mongo issuetracker scripts/init.mongo.js
 screen npm start
 ```
 - Press Ctrl+a followed by d to return to terminal
-#### run the front-end ui [in folder `ui`]
+### run the front-end ui [in folder "ui"]
 ```
 cd ../ui
 screen npm start
 ```
 - Press Ctrl+a followed by d to return to terminal   
-#### view the app from browser
+### view the app from browser
 - open **`localhost:3000`** in your browser and you can play with the app
   
 ps: You'd better to follow all the steps above to make sure the app run correctly!

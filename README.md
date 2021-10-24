@@ -5,7 +5,14 @@
 ## Environment needed
 #### docker environment needed:
 
-- ubuntu with nvm/npm installed: `docker pull ubuntu`, attach shell and do the following:
+- ubuntu: `docker pull ubuntu`:
+
+- run the container with port 3000 and port 5000 open for use
+    ```
+    docker run -p 3000:3000 -p 5000:5000 -dit ubuntu
+    ```
+
+- install nvm and npm:
     ```
     apt update
     apt install curl
@@ -31,9 +38,10 @@
     ```
     - If mongod screen exits instantly, then you have a problem. Do the following: `mkdir -p /data/db`, redo the `screen mongod` and press Ctrl+a followed by d to return to terminal. You are ready to run mongo CLI using $mongo.
 
-- git: apt install git
-
-- open port 3000 and port 5000 for use
+- git: `apt install git` and then clone the tut5
+    ```
+    git clone https://irissky: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@github.com/irissky/tut5.git 
+    ```
 
 ## Commands for running tutorial 5
 #### install the dependencies
